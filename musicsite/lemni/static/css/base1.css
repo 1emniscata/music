@@ -24,7 +24,7 @@ body{
       background-color: rgb(194, 11, 226);
       width: 30%;
       position: fixed;
-      
+      /* rgb(194, 11, 226) */
       /* left: 10%; */
   }
 
@@ -166,3 +166,32 @@ body{
     padding-right: 14.341px;
     padding-left: 14.341px;
 }
+
+footer {
+    background-color: rgb(194, 11, 226);
+    text-align: center;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+.social a img{
+    background-color: white;
+    margin-left: 10px;
+    border-radius: 20%;
+    margin-bottom: 5px;
+    line-height: 3em;
+}
+.social a img:hover {
+    /* padding: 2px; */
+    /* background-color: chartreuse; */
+    border: 2px solid chartreuse;
+    /* line-height: 1.2em; */
+    /* margin: 1px; */
+    /* background-color: chartreuse; */
+    /* margin-top: 15px; */
+    /* background-size: 105%; */
+
+}
+/* footer a {
+    line-height: 1.1em;
+} */

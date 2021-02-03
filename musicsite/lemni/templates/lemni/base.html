@@ -53,6 +53,14 @@
     <h2>Some text</h2>
 </div>
 {% endblock %}
-
+<footer>
+    <a href="{% url 'lemni:artists_list' %}" class='Artists'>Artists</a>
+    <a href="{% url 'lemni:songs_list' %}" class='Songs'>Songs</a>
+    <a href="{% url 'lemni:clips_list' %}" class='Clips'>Clips</a>
+    <div class="social">
+        <a href="#"><img src="media/social/Linkedin.png" alt=""></a>
+        <a href="#"><img src="media/social/Telegram1.png" alt=""></a>
+    </div>
+</footer>
 </body>
 </html>
