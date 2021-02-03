@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.views.generic.base import View
 from .models import Artist, Genre, Song, Clip
 
@@ -17,7 +17,7 @@ class ArtistsView(View):
 class ArtistDetail(View):
     def get(self, request, id, slug):
         # artist = Artist.objects.all() # filter by slug
-        artist = get_object_or_404()
+        artist = get_object_or_404(Artist, id=id, slug=slug)
         context = {'artist': artist}
         return render (request, 'lemni/artist_detail.html', context)
 

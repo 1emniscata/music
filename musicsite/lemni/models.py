@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 
 class Genre(models.Model):
@@ -66,3 +67,6 @@ class Artist(models.Model):
         verbose_name = 'Artist'
         verbose_name_plural = 'Artists'
         ordering = ['alias']
+
+    def get_absolute_url(self):
+        return reverse('lemni:artist_detail', args=[self.id, self.slug])

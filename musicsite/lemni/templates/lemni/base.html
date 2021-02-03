@@ -34,7 +34,7 @@
             
             <div class="wrapper-btn">
                 {% if user.is_authenticated%}
-                    <a class="Log_out" href="{% url 'shop:logout'%}">Log out</a> !!!
+                    <a class="Log_out" href="{% url 'lemni:artists_list'%}">Log out</a> !!!
                 {% else %}
                     <a href="{% url 'lemni:artists_list' %}" class='Sign_up'>Sign up</a>
                     <a href="{% url 'lemni:artists_list' %}" class='Log_in'>Log in</a>
