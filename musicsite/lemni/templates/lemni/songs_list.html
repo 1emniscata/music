@@ -1,0 +1,15 @@
+{% extends 'lemni/base.html' %}
+{% load static %}
+{% block title %}Songs{% endblock %}
+{% block content %}
+<div class='songs_list'>
+    <h1>Songs</h1>
+    {% for song in songs %}
+        <h3>{{ song.name }}</h3>
+        <a href="">
+            <img class='song-cover' src="{{ song.cover.url }}" alt="">
+        </a>
+       
+    {% endfor %}
+</div>
+{% endblock %}

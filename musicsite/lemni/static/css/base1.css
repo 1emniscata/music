@@ -1,0 +1,159 @@
+body{
+     margin: 0; 
+    /* background-image: url('../imgs/1.jpeg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 1250px 610px; */ 
+  } 
+
+.body1 {
+    /* margin-top: 80px; */
+    width: 1228px;
+    height: 530px;
+    margin: 0;
+    background-image: url('../imgs/4.jpeg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 1230px 530px;
+    
+}
+ 
+  
+.header-left {
+      height: 80px;
+      background-color: rgb(194, 11, 226);
+      width: 30%;
+      position: fixed;
+      
+      /* left: 10%; */
+  }
+
+.header-text {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    padding-top: 25px;
+    padding-left: 90px;
+    font-size: 60px;
+    /* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    font-family: 'Dancing Script', cursive;
+
+    text-align: center;
+    /* text-decoration: none; */
+    }
+
+.main_link {
+    text-decoration: none;
+}
+
+.header-right {
+    height: 80px;
+    width: 70%;
+    left: 30%;
+    position: fixed;
+    background-color: MediumSeaGreen; 
+    /* vertical-align: bottom; */
+    /* text-align: center; */
+    /* Orange, MediumSeaGreen, StateBlue ,Violet */
+    /* #9963ff #9c1fec */
+}
+
+.Artists {
+    font-size: 35px;
+    padding-top: 30px; 
+    /* text-align: bottom; */
+    margin-left: 20px;
+    font-family: 'Yusei Magic', sans-serif;
+    
+    /* padding-top: 5%; */
+    /* margin-bottom: 10px; */
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.Songs {
+    font-size: 35px;
+    justify-content: center;
+    text-decoration: none;
+    margin-left: 20px;
+    line-height: 2.1em;
+    color: rgb(0, 0, 0);
+    font-family: 'Yusei Magic', sans-serif;
+}
+
+.Clips {
+    font-size: 35px;
+    text-decoration: none;
+    margin-left: 20px;
+    color: rgb(0, 0, 0);
+    font-family: 'Yusei Magic', sans-serif;
+}
+
+.Artists:hover, .Songs:hover, .Clips:hover {
+    /* text-decoration: underline; */
+    border-bottom: 5px solid blueviolet;
+    /* color: blueviolet; */
+}
+/* .Artists:visited {
+    border-bottom: chartreuse;
+} */
+
+.quote {
+    display: block;
+    color: chartreuse;
+    margin-top: 21px;
+    padding-top: 20px;
+    text-align: center;
+    /* font-family: 'Lucida Console', monospace, sans-serif; */
+    font-family: 'Josefin Sans', sans-serif;
+    /* width: 100%; */
+}
+
+.wrapper-btn {
+    display:inline;
+    width:200px;
+    justify-content:space-around;
+    align-items:center;
+    margin-left: 260px;
+}
+
+.Sign_up {
+    text-decoration: none;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 6px;
+    margin-right: 15px;
+    color: blueviolet;
+    background-color: white;
+    border: blueviolet solid;
+    width:110px;
+    height:40px;
+    border-radius: 20px;
+}
+
+.Sign_up:hover {
+    color: white;
+    background-color: blueviolet;
+}  
+  
+.Log_in {
+    text-decoration: none;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 8.73px;
+    padding-right: 17.5px;
+    padding-left: 17.5px;
+    color: white;
+    background-color: blueviolet;
+    border-radius: 20px;
+    
+}
+
+.Log_in:hover {
+    /* opacity: 0.8; */
+    color:  blueviolet;
+    background-color: white;
+    border: blueviolet solid;
+    padding: 6px;
+    padding-right: 14.341px;
+    padding-left: 14.341px;
+}

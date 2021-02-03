@@ -1,0 +1,10 @@
+{% extends 'lemni/base.html' %}
+{% load static %}
+{% block title %}{{ artist.alias }}{% endblock %}
+{% block extra_css %}<link rel="stylesheet" href="{% static 'css/artists_detail.css'%}">{% endblock %}
+{% block content %}
+<div>
+    <img src="{{ artist.photo.url }}" alt="">
+    <span class='artist-alias'>{{ artist.alias }}</span>
+</div>
+{% endblock %}

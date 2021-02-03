@@ -1,0 +1,30 @@
+body, h1, p {
+  margin: 0;
+}
+
+.header {
+    height: 80px;
+    background-color: rgb(194, 11, 226);
+    width: 400px;
+    position: static;
+}
+
+.header-text {
+    color: rgb(0, 0, 0);
+    padding-top: 20px;
+    font-size: 40px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+
+.header-categories {
+    height:80px;
+    width: 600px;
+    background-color: rgb(128, 255, 0);
+    position: static;
+    left: 0px;
+    float: right;
+    margin-bottom: 60px;
+}
+
+

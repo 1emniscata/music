@@ -1,0 +1,65 @@
+.photo {
+    width: 150px;
+    height: 150px;
+}
+ 
+.artists_list {
+    margin-right: 30px;
+    padding-right: 30px;
+    /* width: 300px; */
+    /* justify-content: center; */
+}
+.artist-alias {
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+    vertical-align: top;
+    /* margin-bottom: 30px; */
+    /* line-height: 1.5em; */
+    color: black;
+    text-decoration: none;
+    padding-left: 10px;
+
+}
+
+.artist-alias:hover {
+    color: blueviolet;
+}
+
+.artist-link {
+    text-decoration: none;
+    padding-bottom: 30px;
+    /* vertical-align: middle; */
+    /* margin: 0; */
+}
+.artist{
+    width: 400px;
+    display: inline-flex;
+    margin-right: 20px;
+    margin-left: 30px;
+    -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+    /* text-decoration: none; */
+        /* width: 50px;
+        height: 50px; */
+}
+
+.artist:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    /* background-color: blueviolet; */
+    /* border: blueviolet solid; */
+}
+
+
+.item {
+    /* justify-content: space-evenly; */
+    padding-left: 30px;
+    margin-bottom: 40px;
+}
+
+input {
+    margin-bottom: 10px;
+}
