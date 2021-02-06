@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title%}Login{% endblock %}</title>
+    {% load static%}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    
+</head>
+<body>
+
+    {% if user.is_authenticated %}
+    <p class="message">You're already logged in</p>
+    {% else %}
+    <form class='box' action="" method="POST">
+        {% csrf_token %}
+        <h1>Login</h1>
+        <span class='login'>{{ form.username }}</span>
+        <span class='pass'> {{ form.password }}</span>
+        <!-- <input type="text" placeholder="username">
+        <input type="password" placeholder="password"> -->
+        <input type="hidden" name='next' value="{{ next }}">
+        <input type="submit" value='Log in'>
+    </form>
+    {% endif %}
+</body>
+</html>

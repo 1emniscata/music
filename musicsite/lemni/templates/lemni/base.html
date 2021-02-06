@@ -17,6 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fontawesome.com/icons/telegram?style=brands">
     {% block extra_css %}{% endblock %}
 </head>
 <body>
@@ -34,10 +35,11 @@
             
             <div class="wrapper-btn">
                 {% if user.is_authenticated%}
-                    <a class="Log_out" href="{% url 'lemni:artists_list'%}">Log out</a> !!!
+                    <span>Hi, {{ user.username }}!</span>
+                    <a class="Log_out" href="{% url 'lemni:logout'%}">Log out</a>
                 {% else %}
                     <a href="{% url 'lemni:artists_list' %}" class='Sign_up'>Sign up</a>
-                    <a href="{% url 'lemni:artists_list' %}" class='Log_in'>Log in</a>
+                    <a href="{% url 'lemni:login' %}" class='Log_in'>Log in</a>
                 {% endif%}
             </div>
 
@@ -58,8 +60,13 @@
     <a href="{% url 'lemni:songs_list' %}" class='Songs'>Songs</a>
     <a href="{% url 'lemni:clips_list' %}" class='Clips'>Clips</a>
     <div class="social">
-        <a href="#"><img src="media/social/Linkedin.png" alt=""></a>
-        <a href="#"><img src="media/social/Telegram1.png" alt=""></a>
+        <a href="#"><img src="{% static 'social/Linkedin.svg'%}" alt=""></a>
+        <a href="#"><img src="{% static 'social/Telegram.svg'%}" alt=""></a> 
+        <!-- <a href="#"><img src="media/social/facebook.svg" alt=""></a> -->
+        <a href="#"><img src="{% static 'social/facebook.svg'%}" alt=""></a>
+    </div> 
+    <div class='reference'>
+        <span>Lemniscata, 2021</span>
     </div>
 </footer>
 </body>

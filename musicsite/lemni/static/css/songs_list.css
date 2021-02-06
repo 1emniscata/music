@@ -1,0 +1,23 @@
+.song_cover {
+    width: 100px;
+}
+
+.song {
+    display: inline-block;
+    text-decoration: none;
+    width: 410px;
+}
+.song_name   {
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    text-decoration: none;
+    /* margin: 0 auto; */
+    height: 100px;
+    padding-top: 25px;
+    font-size: 20px;
+}
+
+.song_link {
+    text-decoration: none;
+}

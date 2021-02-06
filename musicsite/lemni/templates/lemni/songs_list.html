@@ -1,14 +1,22 @@
 {% extends 'lemni/base.html' %}
 {% load static %}
 {% block title %}Songs{% endblock %}
+{% block extra_css %}<link rel="stylesheet" href="{% static 'css/songs_list.css'%}">{% endblock %}
 {% block content %}
 <div class='songs_list'>
     <h1>Songs</h1>
     {% for song in songs %}
-        <h3>{{ song.name }}</h3>
-        <a href="">
-            <img class='song-cover' src="{{ song.cover.url }}" alt="">
-        </a>
+        <!-- <h3>{{ song.name }}</h3> -->
+        <div class='song'>
+            <a class='song_link' href="#">
+                <img class='song_cover' src="{{ song.cover.url }}" alt="">
+                <!-- <span class='song_name'>{{ song.name }}</span> -->
+            </a> 
+
+            <a class='song_link' href="#"></a>
+                <div class='song_name'>{{ song.name }}</div>
+            </a> 
+        </div> 
        
     {% endfor %}
 </div>

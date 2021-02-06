@@ -1,5 +1,8 @@
+from django.contrib.auth.views import LoginView
 from django.shortcuts import render, get_object_or_404
 from django.views.generic.base import View
+
+from .forms import LoginForm
 from .models import Artist, Genre, Song, Clip
 
 
@@ -34,6 +37,11 @@ class ClipsView(View):
         clips = Clip.objects.all()
         context = {'clips': clips}
         return render(request, 'lemni/clips_list.html', context)
+
+class LemniLoginView(LoginView):
+    template_name = 'user/login.html'
+    # redirect_field_name = ''
+    authentication_form = LoginForm
 
 
 
