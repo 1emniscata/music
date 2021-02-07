@@ -21,41 +21,44 @@
     {% block extra_css %}{% endblock %}
 </head>
 <body>
+<div class='wrapper'>
+        <div>
+            <span class='header-left'>
+                <a class = 'main_link' href="{% url 'lemni:main' %}">
+                    <span class='header-text'>LeMusic</span>
+                </a>
+            </span>
+    
+            <span class='header-right'>
+                <a href="{% url 'lemni:artists_list' %}" class='Artists'>Artists</a>
+                <a href="{% url 'lemni:songs_list' %}" class='Songs'>Songs</a>
+                <a href="{% url 'lemni:clips_list' %}" class='Clips'>Clips</a>
+                
+                <div class="wrapper-btn">
+                    {% if user.is_authenticated%}
+                        <span>Hi, {{ user.username }}!</span>
+                        <a class="Log_out" href="{% url 'lemni:logout'%}">Log out</a>
+                    {% else %}
+                        <a href="{% url 'lemni:artists_list' %}" class='Sign_up'>Sign up</a>
+                        <a href="{% url 'lemni:login' %}" class='Log_in'>Log in</a>
+                    {% endif%}
+                </div>
+    
+            </span>
+        <div><br><br><br>
+    {% block content %}
+    <div class="body1">
+        <span class='quote'>“Music comes to me more readily than words.” – Ludwig Van Beethoven</span>
+    <!--    <img src="{% static 'imgs/1.jpeg' %}}" alt="">-->
+    </div>
+    
     <div>
-        <span class='header-left'>
-            <a class = 'main_link' href="{% url 'lemni:main' %}">
-                <span class='header-text'>LeMusic</span>
-            </a>
-        </span>
-
-        <span class='header-right'>
-            <a href="{% url 'lemni:artists_list' %}" class='Artists'>Artists</a>
-            <a href="{% url 'lemni:songs_list' %}" class='Songs'>Songs</a>
-            <a href="{% url 'lemni:clips_list' %}" class='Clips'>Clips</a>
-            
-            <div class="wrapper-btn">
-                {% if user.is_authenticated%}
-                    <span>Hi, {{ user.username }}!</span>
-                    <a class="Log_out" href="{% url 'lemni:logout'%}">Log out</a>
-                {% else %}
-                    <a href="{% url 'lemni:artists_list' %}" class='Sign_up'>Sign up</a>
-                    <a href="{% url 'lemni:login' %}" class='Log_in'>Log in</a>
-                {% endif%}
-            </div>
-
-        </span>
-    <div><br><br><br>
-{% block content %}
-<div class="body1">
-    <span class='quote'>“Music comes to me more readily than words.” – Ludwig Van Beethoven</span>
-<!--    <img src="{% static 'imgs/1.jpeg' %}}" alt="">-->
+        <h2>Some text</h2>
+    </div>
+    {% endblock %}
+    <div class="push"></div>
 </div>
-
-<div>
-    <h2>Some text</h2>
-</div>
-{% endblock %}
-<footer>
+<footer class='footer'>
     <a href="{% url 'lemni:artists_list' %}" class='Artists'>Artists</a>
     <a href="{% url 'lemni:songs_list' %}" class='Songs'>Songs</a>
     <a href="{% url 'lemni:clips_list' %}" class='Clips'>Clips</a>

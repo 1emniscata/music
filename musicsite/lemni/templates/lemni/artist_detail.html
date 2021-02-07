@@ -1,10 +1,19 @@
 {% extends 'lemni/base.html' %}
 {% load static %}
 {% block title %}{{ artist.alias }}{% endblock %}
-{% block extra_css %}<link rel="stylesheet" href="{% static 'css/artists_detail.css'%}">{% endblock %}
+{% block extra_css %}<link rel="stylesheet" href="{% static 'css/artist_detail.css'%}">{% endblock %}
 {% block content %}
-<div>
-    <img src="{{ artist.photo.url }}" alt="">
-    <span class='artist-alias'>{{ artist.alias }}</span>
+<div class='item'>
+    <img class='photo' src="{{ artist.photo.url }}" alt="">
+    <div class="description">
+        <h1 class='artist-alias'><span class='label'>Alias:</span> {{ artist.alias }}</h1>
+        <div class="artist-real-name"><span class='label'>Original name:</span> {{ artist.first_name }} {{ artist.last_name }}</div>
+        <div class="birthday"><span class="label">Birthday: </span> {{ artist.birthday }}</div>
+        <div class="info"><span class='label'>Info: </span>{{ artist.description }}</div>
+        <div class="songs">{{ artist.songs}}</div>
+    </div>
+    
 </div>
+Go to G-eazy songs 
+Go to G-eazy clips
 {% endblock %}
