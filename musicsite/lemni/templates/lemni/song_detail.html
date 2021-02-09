@@ -1,0 +1,19 @@
+{% extends 'lemni/base.html' %}
+{% load static %}
+{% block title %}{{ artist.alias }}{% endblock %}
+{% block extra_css %}<link rel="stylesheet" href="{% static 'css/song_detail.css'%}">{% endblock %}
+{% block content %}
+    <div class="item">
+        <img src="{{ song.cover.url }}" alt="" class="cover">
+        <div class="description">
+            <h1 class="name">Name: {{ song.name }}</h1>
+            <div class="artist">Artist: {{ song.artist }}</div>
+            <div class="feature">Feature: </div>
+            <div class="release_date">Release date: {{ song.release_date}}</div>
+            <div class="genres">Genres: {{ song.genre }}</div>
+            <div class="info">Info: {{ song.description }}</div>
+            <a href="{{ song.lyrics }}" class="lyrics">Check lyrics</a>
+
+        </div>
+    </div>
+{% endblock %}
