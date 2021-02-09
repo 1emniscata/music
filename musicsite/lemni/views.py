@@ -32,6 +32,34 @@ class SongsView(View):
         return render(request, 'lemni/songs_list.html', context)
 
 
+class SongDetail(View):
+    def get(self, request, slug):
+        song= get_object_or_404(Song, slug=slug)
+        context = {'song': song}
+        return render(request, 'lemni/song_detail.html', context)
+
+
+class ArtistSongsView(View):
+    def get(self, request, artist_slug):
+        # if id:
+        #     songs = Song.objects.filter(artist=id)
+        # else:
+        #     songs = Song.objects.all()
+        artist = None
+        # songs = Song.objects.filter(artist_slug=artist_slug)
+        songs = Song.objects.filter(artist__alias='A$AP Rocky')
+
+        # songs = get_object_or_404(Song) Pay attention to it!!!
+
+
+        # songs = Song.objects.all()
+                # if artist_slug:
+        #     artist = get_object_or_404(Artist, slug=artist_slug)
+        #     songs = Song.objects.filter(artist=artist.id)
+        #     # print('HIIIII')
+        context = {'songs': songs}
+        return render(request, 'lemni/songs_list.html', context)
+
 class ClipsView(View):
     def get(self, request):
         clips = Clip.objects.all()

@@ -1,7 +1,7 @@
 from django.contrib.auth.views import LogoutView
 from django.urls import path
 from . import views
-from .views import ArtistsView, ArtistDetail, main, SongsView, ClipsView, LemniLoginView
+from .views import ArtistsView, ArtistDetail, main, SongsView, ClipsView, LemniLoginView, ArtistSongsView, SongDetail
 
 app_name = 'lemni'
 
@@ -12,5 +12,7 @@ urlpatterns = [
     path('artists/', ArtistsView.as_view(), name='artists_list'),
     path(r'^(?P<id>\d+)/(?P<slug>[-\w]+)/$' , ArtistDetail.as_view(), name='artist_detail'),
     path('songs/', SongsView.as_view(), name='songs_list'),
+    path('songs/,<slug:slug>', SongDetail.as_view(), name='song_detail'),
+    path('songs/<slug:slug>', ArtistSongsView.as_view(), name='artist_songs_list'),
     path('clips/', ClipsView.as_view(), name='clips_list'),
 ]

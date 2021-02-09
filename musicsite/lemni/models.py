@@ -30,6 +30,7 @@ class Clip(models.Model):
 
 class Song(models.Model):
     name = models.CharField(max_length=55)
+    # slug = models.SlugField(max_length=100, db_index=True, unique=True)
     artist = models.ManyToManyField('Artist', related_name='artist')
     feature = models.ManyToManyField('Artist', related_name='feature', blank=True)
     cover = models.ImageField(upload_to='covers')
@@ -46,6 +47,9 @@ class Song(models.Model):
         verbose_name = 'Song'
         verbose_name_plural = 'Songs'
         ordering = ['name']
+
+    def get_absolute_url(self):
+        return reverse('lemni:song_detail', args=[self.slug])
 
 
 class Artist(models.Model):

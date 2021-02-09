@@ -25,6 +25,7 @@ class SongAdmin(admin.ModelAdmin):
     list_display = ['name', 'cover', 'release_date', 'description', 'lyrics']
     list_display_links = ['name']
     search_fields = ['name', 'artist', 'feature']
+    # prepopulated_fields = {'slug': ('artist', 'name')}
 
 
 admin.site.register(Song, SongAdmin)

@@ -10,7 +10,7 @@
         <div class="artist-real-name"><span class='label'>Original name:</span> {{ artist.first_name }} {{ artist.last_name }}</div>
         <div class="birthday"><span class="label">Birthday: </span> {{ artist.birthday }}</div>
         <div class="info"><span class='label'>Info: </span>{{ artist.description }}</div>
-        <div class="songs">{{ artist.songs}}</div>
+        <div class="songs"><a href="{% url 'lemni:artist_songs_list' artist.slug %}" class="songs-link">Songs</a></div>
     </div>
     
 </div>
