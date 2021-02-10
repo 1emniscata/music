@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.views import LoginView
 from django.shortcuts import render, get_object_or_404
 from django.views.generic.base import View
@@ -71,5 +72,9 @@ class LemniLoginView(LoginView):
     # redirect_field_name = ''
     authentication_form = LoginForm
 
+
+@login_required
+def profile(request):
+    return render(request, 'user/profile.html')
 
 

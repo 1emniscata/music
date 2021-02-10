@@ -24,13 +24,13 @@
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
     <loaded-nodes>
-      <connection connection-id="8fd5a346-9f22-44bb-b4a4-f6ee0b96969f">
+      <connection connection-id="42c0990a-f2f6-4cf7-9248-14c99d1890b8">
         <schema name="main" object-types="table, view" />
       </connection>
     </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="8fd5a346-9f22-44bb-b4a4-f6ee0b96969f">
+    <connection id="42c0990a-f2f6-4cf7-9248-14c99d1890b8">
       <console name="Connection" type="STANDARD" schema="main" session="Main" />
     </connection>
   </component>
@@ -38,13 +38,10 @@
     <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
-    <connection id="8fd5a346-9f22-44bb-b4a4-f6ee0b96969f" />
+    <connection id="42c0990a-f2f6-4cf7-9248-14c99d1890b8" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
-    <filter-actions connection-id="8fd5a346-9f22-44bb-b4a4-f6ee0b96969f" dataset="main.lemni_song_artist" active-filter-id="EMPTY_FILTER" />
-    <filter-actions connection-id="8fd5a346-9f22-44bb-b4a4-f6ee0b96969f" dataset="main.lemni_song_feature" active-filter-id="EMPTY_FILTER" />
-    <filter-actions connection-id="8fd5a346-9f22-44bb-b4a4-f6ee0b96969f" dataset="main.lemni_artist" active-filter-id="EMPTY_FILTER" />
-    <filter-actions connection-id="8fd5a346-9f22-44bb-b4a4-f6ee0b96969f" dataset="main.lemni_song" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="42c0990a-f2f6-4cf7-9248-14c99d1890b8" dataset="main.lemni_song" active-filter-id="EMPTY_FILTER" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
@@ -72,7 +69,7 @@
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="8fd5a346-9f22-44bb-b4a4-f6ee0b96969f" active="true">
+      <connection id="42c0990a-f2f6-4cf7-9248-14c99d1890b8" active="true">
         <database>
           <name value="Connection" />
           <description value="" />

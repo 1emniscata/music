@@ -1,3 +1,4 @@
+from django.contrib.auth.models import AbstractUser
 from django.db import models
 from django.urls import reverse
 
@@ -30,7 +31,7 @@ class Clip(models.Model):
 
 class Song(models.Model):
     name = models.CharField(max_length=55)
-    # slug = models.SlugField(max_length=100, db_index=True, unique=True)
+    slug = models.SlugField(max_length=100, db_index=True, unique=True)
     artist = models.ManyToManyField('Artist', related_name='artist')
     feature = models.ManyToManyField('Artist', related_name='feature', blank=True)
     cover = models.ImageField(upload_to='covers')
@@ -50,6 +51,7 @@ class Song(models.Model):
 
     def get_absolute_url(self):
         return reverse('lemni:song_detail', args=[self.slug])
+
 
 
 class Artist(models.Model):
@@ -74,3 +76,10 @@ class Artist(models.Model):
 
     def get_absolute_url(self):
         return reverse('lemni:artist_detail', args=[self.id, self.slug])
+
+class MyUser(AbstractUser):
+    is_activated = models.BooleanField(default=True, db_index=True, verbose_name='Passed activation')
+    send_messages = models.BooleanField(default=True, verbose_name='Receiving of email notifications')
+
+    class Meta(AbstractUser.Meta):
+        pass

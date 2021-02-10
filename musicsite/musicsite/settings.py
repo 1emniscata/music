@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'lemni'
+    'lemni',
+    'social_django',
 ]
 
 MIDDLEWARE = [
@@ -63,6 +64,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -125,3 +128,15 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 LOGIN_REDIRECT_URL = '/'
+
+AUTH_USER_MODEL = 'lemni.MyUser'
+
+AUTHENTICATION_BACKENDS = {
+    'social_core.backends.vk.VKOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+}
+
+SOCIAL_AUTH_VK_OAUTH2_KEY = 'kq4aBdrAe8gnmUvoxsgA'
+SOCIAL_AUTH_VK_OAUTH2_SECRET = '3cf97be53cf97be53cf97be5183c8f211633cf93cf97be55cdbb385c9c8efbd71ec42c0'
+
+SOCIAL_AUTH_VK_OAUTH2_SCOPE = ['email']
