@@ -1,10 +1,12 @@
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.views import LoginView
 from django.shortcuts import render, get_object_or_404
-from django.views.generic.base import View
+from django.urls import reverse_lazy
+from django.views.generic import CreateView
+from django.views.generic.base import View, TemplateView
 
-from .forms import LoginForm
-from .models import Artist, Genre, Song, Clip
+from .forms import LoginForm, RegistrationForm
+from .models import Artist, Genre, Song, Clip, MyUser
 
 
 def main(request):
@@ -77,4 +79,14 @@ class LemniLoginView(LoginView):
 def profile(request):
     return render(request, 'user/profile.html')
 
+
+class RegistrationUserView(CreateView):
+    model = MyUser
+    template_name = 'user/registration.html'
+    form_class = RegistrationForm
+    success_url = reverse_lazy('user/registration_done.html')
+
+
+class RegistrationDoneView(TemplateView):
+    template_name = 'user/registration_done.html'
 

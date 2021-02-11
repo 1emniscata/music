@@ -39,7 +39,7 @@
                         <a class='profile' href="{% url 'lemni:profile' %}"><span>Hi, {{ user.username }}!</span></a>
                         <a class="Log_out" href="{% url 'lemni:logout' %}">Log out</a>
                     {% else %}
-                        <a href="{% url 'lemni:artists_list' %}" class='Sign_up'>Sign up</a>
+                        <a href="{% url 'lemni:registration' %}" class='Sign_up'>Sign up</a>
                         <a href="{% url 'lemni:login' %}" class='Log_in'>Log in</a>
                     {% endif%}
                 </div>

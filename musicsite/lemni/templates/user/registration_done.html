@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title%}Done{% endblock %}</title>
+    {% load static%}
+    <link rel="stylesheet" href="{% static 'css/registration_done.css' %}">
+</head>
+
+<body>
+   <div class="box">
+        <span>You've successfully passed the registration!</span><br>
+        <span class="letter">The activation letter has been sent to your email.</span>
+   </div>
+</body>
+</html>
+

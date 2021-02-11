@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title%}Registration{% endblock %}</title>
+    {% load static%}
+    <link rel="stylesheet" href="{% static 'css/registration.css' %}">
+    
+</head>
+<body>
+
+   
+   
+    <form class='box' action="" method="POST">
+        {% csrf_token %}
+        <h1>Registartion</h1>
+        <span class='username'>{{ form.username }}</span>
+        <span class='pass'> {{ form.email }}</span>
+        <span class='pass'> {{ form.password1 }}</span>
+        <span class='pass'> {{ form.password2 }}</span>
+        <span class='pass'> {{ form.first_name }}</span>
+        <span class='pass'> {{ form.last_name }}</span>
+        <span class='message'> <div class='mess'>Send messages</div> {{ form.send_messages }}</span>
+        <!-- <input type="text" placeholder="username">
+        <input type="password" placeholder="password"> -->
+        <!-- <input type="hidden" name='next' value="{{ next }}"> -->
+        <input type="submit" value='Register'>
+    </form>
+   
+</body>
+</html>
