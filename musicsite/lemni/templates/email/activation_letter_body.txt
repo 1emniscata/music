@@ -4,7 +4,7 @@ You've passed the registration process on the music site "LeMusic".
 In order to verify your identity, you have to perform an activation.
 To do that, please, click the link
 
-{{ host }} {% url 'lemni:registration_activation' sign=sign %}
+{{ host }}{% url 'lemni:registration_activate' sign=sign %}
 
 Goodbye!
 

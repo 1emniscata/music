@@ -1,23 +1,71 @@
+.songs_list {
+    margin-right: 30px;
+    padding-right: 30px;
+    margin-bottom: 56px;
+    /* width: 300px; */
+    /* justify-content: center; */
+}
+
 .song_cover {
-    width: 100px;
+    width: 150px;
+}
+
+h1  {
+    margin-left: 30px;
+
 }
 
 .song {
-    display: inline-block;
+    /* display: inline-block; */
     text-decoration: none;
-    width: 410px;
+    width: 370px;
+    
+    margin-left: 30px;
+    margin-bottom: 40px;
+    font-weight: bold;
+    vertical-align: top;
+    /* padding-top: 20%; */
+    /* margin-bottom: 30px; */
+    /* line-height: 1.5em; */
+    /* width: 348px; */
+    display: inline-flex;
+    /* margin-right: 10px; */
+    /* margin-left: 30px; */
+    -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    border: 1px solid black;
+    background-color: rgb(255, 255, 255);
+    
 }
-.song_name   {
+
+.song:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    color: blueviolet;
+}
+
+.song_name  {
     display: inline-block;
     text-align: center;
     vertical-align: top;
     text-decoration: none;
     /* margin: 0 auto; */
     height: 100px;
-    padding-top: 25px;
+    padding-top: 15%;
     font-size: 20px;
+    color: black;
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+.song_name:hover {
+    color: blueviolet;
 }
 
 .song_link {
     text-decoration: none;
+    height: 150px;
+    width: 410px; 
 }

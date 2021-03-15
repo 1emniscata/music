@@ -1,0 +1,48 @@
+{% extends 'lemni/base.html' %}
+{% load static %}
+{% block title %}{{ album.name }}{% endblock %}
+{% block extra_css %}<link rel="stylesheet" href="{% static 'css/album_detail.css'%}">{% endblock %}
+{% block content %}
+    <div class='item'>
+        <img class='photo' src="{{ album.cover.url }}" alt="">
+        <div class="description">
+            <h1 class='album_name'><span class='label'>Title: </span> {{ album.name }}</h1>
+            <div class="artist"><span class='label'>Artist: </span><a href='{{ album.artist.get_absolute_url }}'>{{ album.artist }}</a></div>
+            <div class="release_date"><span class="label">Release date: </span> {{ album.release_date }}</div>
+        </div>
+        
+    </div>
+    
+    {% for song in songs %}
+    <div class="song">
+        
+            <!-- <img src="{% static 'sound/play.svg'%}" alt="" class='play'> -->
+            {{ album.artist }}  feat. {{ song.feature }} — {{song.name}}<br>
+            <audio controls style="width: 600px;">
+                
+                <source src="{{ song.audio_file.url }}" type="audio/ogg" />
+                <source src="{{ song.audio_file.url }}" type="audio/mpeg" />
+                <source src="{{ song.audio_file.url }}" type="audio/wav" />
+              Your browser does not support the audio element.
+            </audio>
+
+            
+        
+    </div>
+    {% endfor %}
+    
+<!--    <script src="https://apps.elfsight.com/p/platform.js" defer></script>-->
+<!--    <div class="elfsight-app-48e9b13b-f05e-4be6-8bae-2ea8d1e34174"></div>-->
+    <!-- {% if album.slug == 'g-eazy-scary-nights' %}
+    {% endif %} -->
+
+    <!-- <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+    <div class="elfsight-app-48e9b13b-f05e-4be6-8bae-2ea8d1e34174"></div> -->
+
+
+
+   
+    
+    
+
+{% endblock %}

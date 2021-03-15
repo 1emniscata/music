@@ -10,10 +10,54 @@
         <div class="artist-real-name"><span class='label'>Original name:</span> {{ artist.first_name }} {{ artist.last_name }}</div>
         <div class="birthday"><span class="label">Birthday: </span> {{ artist.birthday }}</div>
         <div class="info"><span class='label'>Info: </span>{{ artist.description }}</div>
-        <div class="songs"><a href="{% url 'lemni:artist_songs_list' artist.slug %}" class="songs-link">Songs</a></div>
+        <div class="songs"><a href="#" class="songs-link">Songs</a></div>
     </div>
     
 </div>
-Go to G-eazy songs 
-Go to G-eazy clips
+
+<div class="songs">
+    {% for song in songs %}
+    <!-- <a class='song_link' href="{{ song.get_absolute_url }}">
+        <img class='song_cover' src="{{ song.cover.url }}" alt="">
+        <div class='song'>
+            <div class='song_name'>{{ song.name }}</div>
+            
+        </div> -->
+        <div class='song'>
+            <a class='song_link' href="{{ song.get_absolute_url }}">
+                <img class='song_cover' src="{{ song.cover.url }}" alt="">
+                <span class='artist-alias'>{{ song.name }}</span>
+            </a> 
+        </div> 
+    </a> 
+    {% endfor %}
+</div>
+
+
+{% if albums %}
+    <h2 class="album_line">The albums of {{ artist.alias }}:</h2>
+{% endif%}
+
+
+
+<div class="albums">
+    {% for album in albums %}
+    {% if album.name != 'None' %}
+    <!-- <a class='song_link' href="{{ song.get_absolute_url }}">
+        <img class='song_cover' src="{{ song.cover.url }}" alt="">
+        <div class='song'>
+            <div class='song_name'>{{ song.name }}</div>
+            
+        </div> -->
+        
+        <div class='album'>
+            <a class='album_link' href="{{ album.get_absolute_url }}">
+                <img class='album_cover' src="{{ album.cover.url }}" alt="">
+                <span class='album_name'>{{ album.name }}</span>
+            </a> 
+        </div> 
+    {% endif %}    
+    {% endfor %}
+</div>
+
 {% endblock %}

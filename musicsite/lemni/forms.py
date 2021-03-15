@@ -36,7 +36,7 @@ class LoginForm(AuthenticationForm):
 class RegistrationForm(forms.ModelForm):
     username = UsernameField(widget=forms.TextInput(attrs={'placeholder': 'username'}))
     email = forms.CharField(required=True, widget=forms.EmailInput(attrs={'placeholder': 'email'}))
-    password1 = forms.CharField(widget=forms.PasswordInput(attrs={'placeholder':'password'}))
+    password1 = forms.CharField(widget=forms.PasswordInput(attrs={'placeholder':'password'}), help_text=password_validation.password_validators_help_text_html)
     password2 = forms.CharField(widget=forms.PasswordInput(attrs={'placeholder':'password again'}))
     first_name = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'first_name'}))
     last_name = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'last_name'}))

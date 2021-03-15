@@ -1,24 +1,31 @@
 body{
     height: 100%;
-     margin: 0; 
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
     /* background-image: url('../imgs/1.jpeg');
     background-repeat: no-repeat;
     background-position: center top;
     background-size: 1250px 610px; */ 
-    background-color: #F0FFFF;
+    background-color: #e6ccff;
   } 
+
+.margin-bg {
+    margin-top: -8vh;
+}
 
 .body1 {
     /* margin-top: 80px; */
     /* width: 1228px; */
-    /* height: 530px; */
+    height: 94vh;
     width: 100%;
-    height: 100%;
+    /* height: 70%; */
     margin: 0;
-    background-image: url('../imgs/4.jpeg');
+    margin-top: 29px;
+    background-image: url('../imgs/5.png');
     background-repeat: no-repeat;
-    background-position: center top;
-    background-size: 1230px 530px;  
+    background-position: center;
+    background-size: cover;  
    
 }
 
@@ -31,19 +38,30 @@ body{
  
   
 .header-left {
-      height: 60px;
-      background-color: rgb(194, 11, 226);
-      width: 30%;
-      position: fixed;
+    display: inline-block;
+    height: 54px;
+    background-color: rgb(194, 11, 226);
+    /* margin-top: 5px; */
+    /* margin-right: -4px; */
+    /* margin-left: 5px; */
+    padding-top: 5px;
+    /* margin-bottom: 5px; */
+    width: 20%;
+    padding-top: 12px;
+      /* position: fixed; */
       /* rgb(194, 11, 226) */
       /* left: 10%; */
   }
 
 .header-text {
+    display: inline-block;
     color: rgb(0, 0, 0);
     font-weight: bold;
-    padding-top: 25px;
-    padding-left: 90px;
+    
+    /* margin-top: 5px; */
+    /* line-height: 0.5em; */
+    padding-left:23%;
+    margin-top: -5px;
     font-size: 45px;
     /* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
     font-family: 'Dancing Script', cursive;
@@ -57,11 +75,20 @@ body{
 }
 
 .header-right {
+    position: absolute;
+    /* top: 0; */
+    /* margin-top: -14px; */
+    margin-left: -10%; 
+    display: inline-block;
+    /* margin-left: -4px; */
     height: 60px;
-    width: 70%;
+    width: 80%;
     left: 30%;
-    position: fixed;
+    /* margin-left: -133px; */
+    /* position: fixed; */
     background-color: MediumSeaGreen; 
+    padding-top: 6px;
+    /* padding-bottom: -10px; */
     /* vertical-align: bottom; */
     /* text-align: center; */
     /* Orange, MediumSeaGreen, StateBlue ,Violet */
@@ -88,7 +115,16 @@ body{
     justify-content: center;
     text-decoration: none;
     margin-left: 20px;
-    line-height: 3em;
+    line-height: 2.7em; 
+    /* "line_height was 3em" */
+    color: rgb(0, 0, 0);
+    font-family: 'Yusei Magic', sans-serif;
+}
+
+.Albums {
+    font-size: 20px;
+    text-decoration: none;
+    margin-left: 20px;
     color: rgb(0, 0, 0);
     font-family: 'Yusei Magic', sans-serif;
 }
@@ -102,7 +138,7 @@ body{
     font-family: 'Yusei Magic', sans-serif;
 }
 
-.Artists:hover, .Songs:hover, .Clips:hover {
+.Artists:hover, .Songs:hover, .Albums:hover, .Clips:hover {
     /* text-decoration: underline; */
     border-bottom: 2px solid black;
     /* color: blueviolet; */
@@ -112,20 +148,52 @@ body{
 } */
 
 .quote {
-    display: block;
-    height: 200px; /* 100vh */
+    display: inline-block;
+    /* height: 10%; */
+    width: 953px;
+    vertical-align: middle;
     /* background-size: cover; */
     /* background-position: center center; */
-    
-    background-color: blueviolet;
-    color: chartreuse;
-    margin-top: 21px;
-    padding-top: 20px;
-    text-align: center;
+    /* background-image: url('../imgs/5.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; */
+    /* background-color: blueviolet; */
+    color: rgb(255, 238, 0);
+    font-size: 36px;
+    /* margin-top: 21px; */
+    padding-bottom: 230px;
+    padding-left: 65px;
+    margin-right: -10px;
+    /* text-align: center; */
     /* font-family: 'Lucida Console', monospace, sans-serif; */
     font-family: 'Josefin Sans', sans-serif;
     /* width: 100%; */
     /* background-image: url('../imgs/4.jpeg'); */
+}
+.bet {
+    padding-left: 155px;
+}
+
+.bet_pic {
+    display: inline-block;
+    padding-top: 95px;
+    width: 280px;
+    height: 280px;
+    margin-left: -20px;
+}
+
+.pic {
+    display: inline-block;
+    padding-top: 50px;
+}
+
+.my_message {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Josefin Sans', sans-serif;
+    padding-top: 60px;
+    margin-bottom: -60px;
 }
 
 .wrapper-btn {
@@ -133,7 +201,7 @@ body{
     width:200px;
     justify-content:space-around;
     align-items:center;
-    margin-left: 50%;
+    margin-left: 45%;
     /* margin-bottom: 10px; */
     /* line-height: 1.5em; */
 }
@@ -151,7 +219,7 @@ body{
     /* margin-bottom: 25px; */
     /* padding-bottom: 8; */
 
-    margin-right: 15px;
+    margin-right: 35px;
     color: blueviolet;
     background-color: white;
     border: blueviolet solid;
@@ -209,6 +277,28 @@ body{
     padding: 6px;
     padding-right: 14.341px;
     padding-left: 14.341px;
+}
+
+.profile {
+    /* width: 200px; */
+    margin-left: -110px;
+    /* font-size: 16px; */
+    color:rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.profile:hover {
+    color:rgb(251, 255, 0);
+}
+
+.prof_link {
+    font-size: 20px;
+}
+
+.prof {
+    display: inline-block;
+    width: 200px;
 }
 
 footer {

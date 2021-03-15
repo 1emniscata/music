@@ -1,0 +1,24 @@
+{% extends 'lemni/base.html' %}
+{% load static %}
+{% block title %}Albums{% endblock %}
+{% block extra_css %}<link rel="stylesheet" href="{% static 'css/albums_list.css'%}">{% endblock %}
+{% block content %}
+<div class='albums_list'>
+    <h1 class='title'>Albums</h1>
+    <!-- <input type="text" placeholder="Search..."> -->
+    {% for album in albums %}
+    
+        <div class='album'>
+            <a class='album_link' href="{{ album.get_absolute_url }}">
+                <img class='cover' src="{{ album.cover.url }}" alt="">
+                <span class='album_name'>{{ album.name }}</span>
+                
+            </a> 
+        </div>   
+        <!-- <div class='artist-alias'>{{ artist.alias }}</div> -->
+    
+    
+
+    {% endfor %}
+</div>
+{% endblock %}

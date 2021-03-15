@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title%}Activation error{% endblock %}</title>
+    {% load static%}
+    <link rel="stylesheet" href="{% static 'css/bad_signature.css' %}">
+</head>
+
+<body>
+   <div class="box">
+        <!-- <span>You've successfully passed the registration!</span><br> -->
+        <span class="letter">User activation failed.</span><br>
+        <span class="link"><a href="{% url 'lemni:registration'%}">Register again</a></span>
+   </div>
+</body>
+</html>
+

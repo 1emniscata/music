@@ -1,19 +1,20 @@
 {% extends 'lemni/base.html' %}
 {% load static %}
-{% block title %}{{ artist.alias }}{% endblock %}
+{% block title %}{{ song.name }}{% endblock %}
 {% block extra_css %}<link rel="stylesheet" href="{% static 'css/song_detail.css'%}">{% endblock %}
 {% block content %}
     <div class="item">
         <img src="{{ song.cover.url }}" alt="" class="cover">
         <div class="description">
-            <h1 class="name">Name: {{ song.name }}</h1>
-            <div class="artist">Artist: {{ song.artist.alias }}</div>
-            <div class="feature">Feature: </div>
-            <div class="release_date">Release date: {{ song.release_date}}</div>
-            <div class="genres">Genres: {{ song.genre }}</div>
-            <div class="info">Info: {{ song.description }}</div>
-            <a href="{{ song.lyrics }}" class="lyrics">Check lyrics</a>
+            <h1 class="name"><span class='label'>Name: </span>{{ song.name }}</h1>
+            <div class="artist"><span class='label'>Artist: </span><a href='{{ artist.get_absolute_url }}'>{{ artist }}</a></div>
+            <div class="feature"><span class='label'>Feature: </span><a href='{% url "lemni:artist_detail" slug="blackbear"  %}'>{% for feature in features %} {{feature}} {% endfor %}</a></div>
+            <div class="release_date"><span class='label'>Release date: </span> {{ song.release_date }}</div>
+            <div class="genres"><span class='label'>Genres: </span>{% for genre in genres %} {{ genre }} {% endfor %}</div>
+            <div class="info"><span class='label'>Info: </span> {{ song.description }}</div>
+            <a href="{{ song.lyrics }}" class="lyrics" target="_blank">Check lyrics</a>
 
+           
         </div>
     </div>
 {% endblock %}

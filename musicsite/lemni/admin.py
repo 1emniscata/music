@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Genre, Artist, Clip, Song, MyUser
+from .models import Genre, Artist, Clip, Song, MyUser, Album
 
 admin.site.register(MyUser)
 
@@ -23,7 +23,7 @@ admin.site.register(Clip, ClipAdmin)
 
 
 class SongAdmin(admin.ModelAdmin):
-    list_display = ['name', 'cover', 'release_date', 'description', 'lyrics']
+    list_display = ['name', 'cover', 'release_date', 'description', 'lyrics', 'audio_file']
     list_display_links = ['name']
     search_fields = ['name', 'artist', 'feature']
     prepopulated_fields = {'slug': ('artist', 'name')}
@@ -38,5 +38,13 @@ class ArtistAdmin(admin.ModelAdmin):
     search_fields = ['alias', 'first_name', 'slug']
     prepopulated_fields = {'slug': ('alias',)}
 
-
 admin.site.register(Artist, ArtistAdmin)
+
+
+class AlbumAdmin(admin.ModelAdmin):
+    list_display = ['name', 'slug', 'artist', 'cover', 'release_date']
+    list_display_links = ['name']
+    search_fields = ['name', 'artist', 'slug']
+    prepopulated_fields = {'slug':('artist', 'name')}
+
+admin.site.register(Album, AlbumAdmin)

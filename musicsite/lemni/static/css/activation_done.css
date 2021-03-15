@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: darkmagenta;
+}
+
+.box {
+    width: 480px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #191919;
+    text-align: center;
+    
+}
+
+.box span {
+    color: chartreuse;
+    font-size: 20px;
+    line-height: 1.7em;
+}
+
+.box span .link {
+    border: orange;
+}
+ 
+.box span a { 
+    /* display: block; */
+    color:orange;
+    
+}  
+
+.box span a:hover {
+    color: chartreuse;
+}

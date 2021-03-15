@@ -3,6 +3,11 @@
 {% load static %}
 
 <head>
+    <!-- <link type="text/css" href="/dist/skin/pink.flag/css/jplayer.pink.flag.css" rel="stylesheet" /> -->
+    <!-- <script type="text/javascript" src="/musicsite/jPlayer/dist/jplayer/jquery.min.js"></script> -->
+    <!-- <script type="text/javascript" src="/../../../jPlayer/dist/jplayer/jquery.jplayer.min.js"></script> -->
+<!-- <script type="text/javascript" src="/home/alex//Desktop/Lemni/musicsite/jPlayer/dist/jplayer/jquery.jplayer.min.js"></script> -->
+    
     <meta charset="UTF-8">
     <meta name="description" content="Music site of Lemniscata">
     <meta name="keywords" content="music, artists, songs, clips">
@@ -32,39 +37,45 @@
             <span class='header-right'>
                 <a href="{% url 'lemni:artists_list' %}" class='Artists'>Artists</a>
                 <a href="{% url 'lemni:songs_list' %}" class='Songs'>Songs</a>
+                <a href="{% url 'lemni:albums_list' %}" class='Albums'>Albums</a>
                 <a href="{% url 'lemni:clips_list' %}" class='Clips'>Clips</a>
                 
                 <div class="wrapper-btn">
                     {% if user.is_authenticated%}
-                        <a class='profile' href="{% url 'lemni:profile' %}"><span>Hi, {{ user.username }}!</span></a>
+                        <a class='profile' href="{% url 'lemni:profile' %}"><span class='prof_link'>Hi, {{ user.username }}!</span></a>
                         <a class="Log_out" href="{% url 'lemni:logout' %}">Log out</a>
                     {% else %}
                         <a href="{% url 'lemni:registration' %}" class='Sign_up'>Sign up</a>
                         <a href="{% url 'lemni:login' %}" class='Log_in'>Log in</a>
                     {% endif%}
                 </div>
-    
+                
             </span>
-        <div><br><br><br>
+        <div>
     {% block content %}
-    <div class="body1">
-        <span class='quote'>“Music comes to me more readily than words.” – Ludwig Van Beethoven</span>
-    <!--    <img src="{% static 'imgs/1.jpeg' %}}" alt="">-->
+    <div class='margin-bg'>
+        <div class="body1">
+            <div class='quote'>“Music comes to me more readily than words.”   <span class='bet'>Ludwig Van Beethoven</span></div>
+            <div class='pic'><img src="{% static 'imgs/bet.jpg'%}" alt="" class="bet_pic"></div>
+            <!-- <img src="{% static 'imgs/bet.jpg'%}}" alt=""> -->
+        </div>
     </div>
     
-    <div>
+    <!-- <div>
         <h2>Some text</h2>
-    </div>
+    </div> -->
+    <div class="my_message">Hi, I'm Alex and I'm 21. There you can see something that I've tried to create.</div>
     {% endblock %}
     <div class="push"></div>
 </div>
 <footer class='footer'>
     <a href="{% url 'lemni:artists_list' %}" class='Artists'>Artists</a>
     <a href="{% url 'lemni:songs_list' %}" class='Songs'>Songs</a>
+    <a href="{% url 'lemni:albums_list' %}" class='Albums'>Albums</a>
     <a href="{% url 'lemni:clips_list' %}" class='Clips'>Clips</a>
     <div class="social">
         <a href="#"><img src="{% static 'social/Linkedin.svg'%}" alt=""></a>
-        <a href="#"><img src="{% static 'social/Telegram.svg'%}" alt=""></a> 
+        <a href="https://t.me/asuzen" target="_blank"><img src="{% static 'social/Telegram.svg'%}" alt=""></a> 
         <!-- <a href="#"><img src="media/social/facebook.svg" alt=""></a> -->
         <a href="#"><img src="{% static 'social/facebook.svg'%}" alt=""></a>
     </div> 

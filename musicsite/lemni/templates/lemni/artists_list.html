@@ -7,17 +7,21 @@
     <h1 class='title'>Artists</h1>
     <!-- <input type="text" placeholder="Search..."> -->
     {% for artist in artists %}
-    
+        {% if artist.alias != 'None' %}
         <div class='artist'>
             <a class='artist-link' href="{{ artist.get_absolute_url }}">
                 <img class='photo' src="{{ artist.photo.url }}" alt="">
+                
                 <span class='artist-alias'>{{ artist.alias }}</span>
             </a> 
-        </div>   
+        </div>
+        {% endif %}
+        
         <!-- <div class='artist-alias'>{{ artist.alias }}</div> -->
     
     
 
     {% endfor %}
 </div>
+
 {% endblock %}
