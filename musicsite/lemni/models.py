@@ -18,7 +18,7 @@ class Genre(models.Model):
 
 class Clip(models.Model):
     title = models.CharField(max_length=200)
-    link = models.CharField(max_length=500)  # there will be a link from YouTube
+    link = models.CharField(max_length=500)  # There will be a link from YouTube
     slug = models.SlugField(max_length=230, db_index=True, unique=True, primary_key=True)
 
     draft = models.CharField(max_length=100, blank=True, null=True)
@@ -55,7 +55,6 @@ class Artist(models.Model):
         return reverse('lemni:artist_detail', args=[self.slug])
 
 
-
 class Album(models.Model):
     name = models.CharField(max_length=55)
     slug = models.SlugField(max_length=60, db_index=True, unique=True, primary_key=True)
@@ -71,7 +70,6 @@ class Album(models.Model):
     def __str__(self):
         return self.name
 
-
     def get_absolute_url(self):
         return reverse('lemni:album_detail', args=[self.slug])
 
@@ -86,7 +84,7 @@ class Song(models.Model):
     cover = models.ImageField(upload_to='covers')
     release_date = models.DateField()
     description = models.TextField()
-    lyrics = models.CharField(max_length=100)  # there will be a link to Genius
+    lyrics = models.CharField(max_length=100)  # There will be a link to Genius
     genre = models.ManyToManyField(Genre)
     draft = models.CharField(max_length=100, blank=True, null=True)
 

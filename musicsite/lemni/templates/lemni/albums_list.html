@@ -7,7 +7,7 @@
     <h1 class='title'>Albums</h1>
     <!-- <input type="text" placeholder="Search..."> -->
     {% for album in albums %}
-    
+        {% if album.name != 'None' %}
         <div class='album'>
             <a class='album_link' href="{{ album.get_absolute_url }}">
                 <img class='cover' src="{{ album.cover.url }}" alt="">
@@ -16,8 +16,8 @@
             </a> 
         </div>   
         <!-- <div class='artist-alias'>{{ artist.alias }}</div> -->
-    
-    
+        {% endif %}
+
 
     {% endfor %}
 </div>

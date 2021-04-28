@@ -8,6 +8,7 @@
   <component name="DBNavigator.Project.DataExportManager">
     <export-instructions>
       <create-header value="true" />
+      <friendly-headers value="false" />
       <quote-values-containing-separator value="true" />
       <quote-all-values value="false" />
       <value-separator value="" />
@@ -24,13 +25,13 @@
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
     <loaded-nodes>
-      <connection connection-id="42c0990a-f2f6-4cf7-9248-14c99d1890b8">
-        <schema name="main" object-types="view, table" />
+      <connection connection-id="c6663732-e09b-408b-9789-9d89b559ed0a">
+        <schema name="main" object-types="table, view" />
       </connection>
     </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="42c0990a-f2f6-4cf7-9248-14c99d1890b8">
+    <connection id="c6663732-e09b-408b-9789-9d89b559ed0a">
       <console name="Connection" type="STANDARD" schema="main" session="Main" />
     </connection>
   </component>
@@ -38,10 +39,13 @@
     <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
-    <connection id="42c0990a-f2f6-4cf7-9248-14c99d1890b8" />
+    <connection id="c6663732-e09b-408b-9789-9d89b559ed0a" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
-    <filter-actions connection-id="42c0990a-f2f6-4cf7-9248-14c99d1890b8" dataset="main.lemni_song" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="c6663732-e09b-408b-9789-9d89b559ed0a" dataset="main.lemni_album" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="c6663732-e09b-408b-9789-9d89b559ed0a" dataset="main.lemni_song_artist" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="c6663732-e09b-408b-9789-9d89b559ed0a" dataset="main.lemni_song_feature" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="c6663732-e09b-408b-9789-9d89b559ed0a" dataset="main.lemni_song" active-filter-id="EMPTY_FILTER" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
@@ -69,7 +73,7 @@
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="42c0990a-f2f6-4cf7-9248-14c99d1890b8" active="true">
+      <connection id="c6663732-e09b-408b-9789-9d89b559ed0a" active="true">
         <database>
           <name value="Connection" />
           <description value="" />
@@ -84,7 +88,7 @@
           <port value="1234" />
           <database value="database" />
           <files>
-            <file path="$PROJECT_DIR$/../Desktop/Lemni/musicsite/db.sqlite3" schema="main" />
+            <file path="$PROJECT_DIR$/musicsite/db.sqlite3" schema="main" />
           </files>
           <type value="NONE" />
           <user value="" />
@@ -118,6 +122,7 @@
           <restore-workspace value="true" />
           <restore-workspace-deep value="true" />
           <environment-type value="default" />
+          <connectivity-timeout value="5" />
           <idle-time-to-disconnect value="30" />
           <idle-time-to-disconnect-pool value="5" />
           <credential-expiry-time value="10" />
@@ -214,8 +219,6 @@
           <object-type name="TABLE" enabled="true" />
           <object-type name="VIEW" enabled="true" />
           <object-type name="MATERIALIZED VIEW" enabled="true" />
-          <object-type name="NESTED TABLE" enabled="false" />
-          <object-type name="COLUMN" enabled="false" />
           <object-type name="INDEX" enabled="true" />
           <object-type name="CONSTRAINT" enabled="true" />
           <object-type name="DATASET TRIGGER" enabled="true" />
@@ -226,8 +229,6 @@
           <object-type name="FUNCTION" enabled="true" />
           <object-type name="PACKAGE" enabled="true" />
           <object-type name="TYPE" enabled="true" />
-          <object-type name="TYPE ATTRIBUTE" enabled="false" />
-          <object-type name="ARGUMENT" enabled="false" />
           <object-type name="DIMENSION" enabled="false" />
           <object-type name="CLUSTER" enabled="false" />
           <object-type name="DBLINK" enabled="true" />

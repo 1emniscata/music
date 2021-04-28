@@ -134,7 +134,7 @@ AUTH_USER_MODEL = 'lemni.MyUser'
 AUTHENTICATION_BACKENDS = {
     'social_core.backends.vk.VKOAuth2',
     'django.contrib.auth.backends.ModelBackend',
-}
+    }
 
 SOCIAL_AUTH_VK_OAUTH2_KEY = 'kq4aBdrAe8gnmUvoxsgA'
 SOCIAL_AUTH_VK_OAUTH2_SECRET = '3cf97be53cf97be53cf97be5183c8f211633cf93cf97be55cdbb385c9c8efbd71ec42c0'

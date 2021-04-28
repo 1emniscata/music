@@ -1,9 +1,11 @@
 from django.core.signing import Signer
 from django.template.loader import render_to_string
 
+# Think about the import below. It seems to me that its work is incorrect.
 from musicsite.settings import ALLOWED_HOSTS
 
 signer = Signer()
+
 
 def send_activation_notification(user):
     if ALLOWED_HOSTS:

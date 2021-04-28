@@ -10,12 +10,15 @@ from .forms import LoginForm, RegistrationForm
 from .models import Artist, Genre, Song, Clip, MyUser, Album
 from .utilities import signer
 
+import requests
+
 
 def main(request):
     return render(request, 'lemni/base.html')
 
 
 class ArtistsView(View):
+
     def get(self, request):
         artists = Artist.objects.all()
         context = {'artists': artists}
@@ -23,18 +26,21 @@ class ArtistsView(View):
 
 
 class ArtistDetail(View):
+
     def get(self, request, slug):
         # artist = Artist.objects.all() # filter by slug
         artist = get_object_or_404(Artist, slug=slug)
         songs = Song.objects.filter(artist__slug=slug)
         albums = Album.objects.filter(artist__slug=slug)
         context = {'artist': artist, 'songs': songs, 'albums': albums}
-        return render (request, 'lemni/artist_detail.html', context)
+        return render(request, 'lemni/artist_detail.html', context)
 
 # <!-- {% if album.name != 'None' %} -->
 # <!-- {% endif %} -->
 
+
 class SongsView(View):
+
     def get(self, request):
         songs = Song.objects.all()
         context = {'songs': songs}
@@ -42,8 +48,9 @@ class SongsView(View):
 
 
 class SongDetail(View):
+
     def get(self, request, slug):
-        song= get_object_or_404(Song, slug=slug)
+        song = get_object_or_404(Song, slug=slug)
         # artist = Artist.objects.get(pk = 1)
         # artist = Artist.objects.filter(song__slug=slug)
         artist = Artist.objects.get(song__slug=slug)
@@ -57,13 +64,11 @@ class SongDetail(View):
                    'features': features
                    }
         print(features)
-
         return render(request, 'lemni/song_detail.html', context)
-
- # <!-- <a href='{% url "lemni:artist_detail" slug=feature.get  %}'>{% for feature in features  %} {{ feature }} {% endfor %}</a> -->
 
 
 class AlbumsView(View):
+
     def get(self, request):
         albums = Album.objects.all()
         # artists = Artist.objects.filter(album__song=)
@@ -85,8 +90,6 @@ class AlbumDetail(View):
         # for song in songs:
         #     print(song.feature)
         return render(request, 'lemni/album_detail.html', context)
-
-
 
 
 '''
@@ -127,6 +130,7 @@ class ClipsView(View):
         clips = Clip.objects.all()
         context = {'clips': clips}
         return render(request, 'lemni/clips_list.html', context)
+
 
 class LemniLoginView(LoginView):
     template_name = 'user/login.html'
